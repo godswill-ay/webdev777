@@ -1,0 +1,113 @@
+/* Base Styles */
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Helps with footer positioning */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Header Styles */
+header {
+    background: #357abd;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted to space-between to push nav to the right */
+}
+
+/* Logo and Title Container */
+.header-container .logo,
+.header-container .header-title {
+    display: inline-block;
+}
+
+/* Logo Styles */
+.logo {
+    height: auto; /* Maintain aspect ratio */
+    width: 100px; /* Adjust based on your preference */
+    margin-right: 20px; /* Space between the logo and the title */
+}
+
+/* Header Title Styles */
+.header-title h1, .header-title p {
+    color: white; /* Text color as per UN header */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    width: 100%; /* Full width to utilize justify-content */
+    padding: 0; /* Removed padding to allow nav items to align right */
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Adjust text color for better visibility on blue background */
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:not(.active):hover {
+    background-color: #003366; /* Darker blue for hover state */
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #FFD700; /* A gold color for the active link */
+}
+
+nav a:hover {
+    background-color:lightblue;
+}
+
+/* Content Box Styles */
+.content-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px; /* Adds padding around the content boxes */
+}
+
+.content-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background: lightblue;
+    transition: box-shadow 0.3s, transform 0.3s;
+    width: calc(50% - 40px); /* Width adjustment for two boxes per row with margin */
+}
+
+.content-box:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+.footer {
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .content-box {
+        width: calc(100% - 40px); /* Full width for smaller devices */
+    }
+}
+
+
